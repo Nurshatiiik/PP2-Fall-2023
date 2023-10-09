@@ -1,3 +1,3 @@
-b = int(input())
-h = int(input())
-print((b*h)/2)
+f = set(input().split())
+s = set(input().split())
+print(len(f&s))

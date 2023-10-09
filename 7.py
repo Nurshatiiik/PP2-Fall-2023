@@ -1,17 +1,19 @@
-a=int(input())
-b=int(input())
-c=int(input())
-if a%2==0:
-    a2=a//2
-else:
-    a2=(a//2)+1
-if b%2==0:
-    b2=b//2
-else:
-    b2=(b//2)+1
-if c%2==0:
-    c2=c//2
-else:
-    c2=(c//2)+1
-
-print(a2+b2+c2)
+n = int(input())
+zadumal = set()
+a = set()
+while True:
+    for i in range(1):
+        a.update(input().split())
+    if 'HELP' in a:
+        zadumal.remove('YES')
+        print(' '.join(sorted(zadumal)))
+        break
+    if 'YES' in a:
+        if zadumal == set():
+            zadumal |= a
+        elif zadumal != a:
+            zadumal = (zadumal & a)
+        a = set()
+    elif 'NO' in a:
+        zadumal -= a
+        a = set()

@@ -1,5 +1,9 @@
-n=int(input())
-h = (n // 60) % 24
-m = n % 60
-print(h)
-print(m)
+x = input()
+i = x.split()
+occ = set()
+for n in i:
+    if n in occ:
+        print("YES")
+    else:
+        print("NO")
+        occ.add(n)

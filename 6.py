@@ -1,3 +1,8 @@
-n=int(input())
-print('The next number for the number', n, 'is', n+1)
-print('The previous number for the number', n, 'is', n-1)
+n = int(input())
+count = set()
+for i in range(n):
+    s1 = input().strip()
+    words = s1.split()
+    for slovo in words:
+        count.add(slovo)
+print(len(count))
